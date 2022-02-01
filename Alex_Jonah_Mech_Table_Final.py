@@ -1,4 +1,6 @@
 #Imports
+#By Alexander Garcia
+#and Jonah
 import mechatronics as mech
 import time
 
