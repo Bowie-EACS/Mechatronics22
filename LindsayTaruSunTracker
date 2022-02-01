@@ -1,0 +1,33 @@
+import mechatronics as mech
+import time
+
+
+MOTOR = 5 #Associate motor with GPIO pin
+
+mech.initialize_motor(MOTOR)  #Initialize motor
+
+ """
+Test Code:
+
+for i in range(5):
+    mech.rotate_motor(MOTOR, 35) # Spin clockwise at a certain speed
+    time.sleep(2) #wait x number of seconds
+    mech.rotate_motor(MOTOR,50) #Stop motor
+"""
+
+LDR = 0
+
+def light_function(LDR):
+    while True:
+        #Create a local variable that holds current LDR vlaue
+        brightness = mech.read_ldr(LDR)
+        print("LDR level is", brightness) #show LDR value in window
+        time.sleep(1)
+      if brightness == 2.0: #if function that asks if the brightness level is at 2
+          time.sleep(3) #pauses for 3 seconds
+          motor_input = (20* difference) + 50;  #calculates a differnece in the motor angle
+          mech.rotate_motor(MOTOR,motor_inpur) #Stops the motors
+      elif (brightness <2) and brightness >= 1): #If the brightness is less than 2 or greater than or equal to 1
+          time.sleep(1) #The motor will stop for one second and continue to find the brightness
+          brightness = mech.read_ldr(LDR)  #Finds the new brightness with the new light
+          print("LDR level is", brightness) #show LDR value in the window
